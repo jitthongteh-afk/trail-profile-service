@@ -1,0 +1,8 @@
+# Append these entries to your existing .gitignore; do not replace its other rules.
+.env
+.env.*
+!.env.docker.example
+.venv/
+**/__pycache__/
+*.pyc
+*.bak

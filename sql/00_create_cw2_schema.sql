@@ -1,0 +1,13 @@
+USE [Assessment1DB];
+GO
+
+IF SCHEMA_ID(N'CW2') IS NULL
+BEGIN
+    EXEC(N'CREATE SCHEMA [CW2] AUTHORIZATION [dbo];');
+END;
+GO
+
+SELECT name AS SchemaName
+FROM sys.schemas
+WHERE name = N'CW2';
+GO
