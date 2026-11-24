@@ -1,3 +1,23 @@
+# Trail Profile Service
+
+The Trail Profile Service is the profile-management microservice for the COMP2001 Trail Application. Members can view and update their profiles and manage activity preferences. Administrators can also manage other users' profiles. The service verifies credentials through the COMP2001 authenticator and stores profile data in the `CW2` schema of Microsoft SQL Server.
+
+GitHub: https://github.com/jitthongteh-afk/trail-profile-service  
+Docker Hub image: `jittongte/trail-profile-service:1.0`
+
+## Repository structure
+
+| Path | Purpose |
+| --- | --- |
+| `app/` | FastAPI application, authentication and profile operations |
+| `app/static/index.html` | Browser interface for signing in and managing profiles |
+| `sql/` | Numbered SQL Server scripts for the CW2 schema, sample data, procedures, validation and permissions |
+| `init_database.py` | Runs the SQL setup scripts for a fresh database |
+| `configure_docker.py` | Checks the SQL login and creates the local `.env.docker` file |
+| `.env.docker.example` | Example database configuration with placeholder credentials |
+| `Dockerfile` | Builds the application image |
+| `docker-compose.yml` | Runs the published image on local port 8001 |
+| `requirements.txt` | Python dependencies |
 ## Prepare SQL Server
 
 The profile service runs in Docker and connects to SQL Server on the Windows host. This setup uses Docker Desktop, Python and Microsoft ODBC Driver 18 for SQL Server. Enable SQL Server authentication and TCP/IP on the host instance. The tested TCP port is 1433.
