@@ -1,0 +1,9 @@
+name: trail-profile
+
+services:
+  profile:
+    image: jittongte/trail-profile-service:1.0
+    env_file:
+      - ./.env.docker
+    ports:
+      - "127.0.0.1:8001:8000"
