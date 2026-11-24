@@ -54,3 +54,7 @@ docker compose exec profile python -m app.db
 Compose uses the published image `jittongte/trail-profile-service:1.0`. The database check should print `Connected to database: Assessment1DB` followed by the sample profiles. Open http://127.0.0.1:8001/ui to use the application or http://127.0.0.1:8001/docs to explore the API.
 
 To stop the application, run `docker compose down`. SQL Server stores the profile data on the Windows host.
+
+## API documentation
+
+See [API_DOCUMENTATION.md](API_DOCUMENTATION.md) for the endpoint list, Postman authentication steps, request examples and expected responses.
